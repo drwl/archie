@@ -1,9 +1,9 @@
 /* Markdown */
 :root{
---maincolor: red;
---bordercl:rebeccapurple;
+--maincolor: #ae81d0;
+--bordercl:#d2b7e7;
 --callouctcolor:dodgerblue;
---hovercolor:navy;
+--hovercolor:#7636a0;
 --darkMaincolor: #50fa7b;
 }
 html {
@@ -139,6 +139,8 @@ header {
   justify-content: space-between;
   margin: 1em 0;
   line-height: 2.5em;
+  border-bottom: 0.4rem dotted var(--bordercl);
+  padding-bottom: 1em;
 }
 
 header .main {
@@ -149,12 +151,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
 }
 
-h1::before { color: var(--maincolor); content: '# '; }
-h2::before { color: var(--maincolor); content: '## '; }
-h3::before { color: var(--maincolor); content: '### '; }
-h4::before { color: var(--maincolor); content: '#### '; }
-h5::before { color: var(--maincolor); content: '##### '; }
-h6::before { color: var(--maincolor); content: '###### '; }
+h1::before { color: var(--maincolor); }
+h2::before { color: var(--maincolor); }
+h3::before { color: var(--maincolor); }
+h4::before { color: var(--maincolor); }
+h5::before { color: var(--maincolor); }
+h6::before { color: var(--maincolor); }
 
 .meta {
   color: #999;
@@ -229,8 +231,9 @@ article .title {
 }
 
 .site-description {
-display: flex;
-justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.4rem dotted var(--bordercl);
+  justify-content: space-between;
 }
 .tags li::before{
   content: "🏷 ";
